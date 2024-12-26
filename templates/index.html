@@ -105,50 +105,121 @@
                 <div class="form-column">
                     <div class="input-group">
                         <label for="age">Age</label>
-                        <input type="number" id="age" name="age" required>
+                        <input type="number" id="age" name="age" placeholder="e.g., 18 (enter integer value)" required>
                     </div>
                     <div class="input-group">
                         <label for="workclass">Workclass</label>
-                        <input type="text" id="workclass" name="workclass" required>
+                        <select id="workclass" name="workclass" required>
+                            <option value="Private">Private</option>
+                            <option value="Self-emp-not-inc">Self-emp-not-inc</option>
+                            <option value="Self-emp-inc">Self-emp-inc</option>
+                            <option value="Federal-gov">Federal-gov</option>
+                            <option value="Local-gov">Local-gov</option>
+                            <option value="State-gov">State-gov</option>
+                            <option value="Without-pay">Without-pay</option>
+                            <option value="Never-worked">Never-worked</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="education">Education</label>
-                        <input type="text" id="education" name="education" required>
+                        <select id="education" name="education" required>
+                            <option value="Bachelors">Bachelors</option>
+                            <option value="Some-college">Some-college</option>
+                            <option value="11th">11th</option>
+                            <option value="HS-grad">HS-grad</option>
+                            <option value="Prof-school">Prof-school</option>
+                            <option value="Assoc-acdm">Assoc-acdm</option>
+                            <option value="Assoc-voc">Assoc-voc</option>
+                            <option value="9th">9th</option>
+                            <option value="7th-8th">7th-8th</option>
+                            <option value="12th">12th</option>
+                            <option value="Masters">Masters</option>
+                            <option value="1st-4th">1st-4th</option>
+                            <option value="10th">10th</option>
+                            <option value="Doctorate">Doctorate</option>
+                            <option value="5th-6th">5th-6th</option>
+                            <option value="Preschool">Preschool</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="education-num">Education Number</label>
-                        <input type="number" id="education-num" name="education-num" required>
+                        <input type="number" id="education-num" name="education-num" placeholder="e.g., 12+4+2 = 18" required>
                     </div>
                     <div class="input-group">
                         <label for="occupation">Occupation</label>
-                        <input type="text" id="occupation" name="occupation" required>
+                        <select id="occupation" name="occupation" required>
+                            <option value="Tech-support">Tech-support</option>
+                            <option value="Craft-repair">Craft-repair</option>
+                            <option value="Other-service">Other-service</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Exec-managerial">Exec-managerial</option>
+                            <option value="Prof-specialty">Prof-specialty</option>
+                            <option value="Handlers-cleaners">Handlers-cleaners</option>
+                            <option value="Machine-op-inspct">Machine-op-inspct</option>
+                            <option value="Adm-clerical">Adm-clerical</option>
+                            <option value="Farming-fishing">Farming-fishing</option>
+                            <option value="Transport-moving">Transport-moving</option>
+                            <option value="Priv-house serv">Priv-house serv</option>
+                            <option value="Protective-serv">Protective-serv</option>
+                            <option value="Armed-Forces">Armed-Forces</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-column">
                     <div class="input-group">
                         <label for="race">Race</label>
-                        <input type="text" id="race" name="race" required>
+                        <select id="race" name="race" required>
+                            <option value="White">White</option>
+                            <option value="Asian-Pac-Islander">Asian-Pac-Islander</option>
+                            <option value="Amer-Indian-Eskimo">Amer-Indian-Eskimo</option>
+                            <option value="Black">Black</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="sex">Sex</label>
-                        <input type="text" id="sex" name="sex" required>
+                        <select id="sex" name="sex" required>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="capital-gain">Capital Gain</label>
-                        <input type="number" id="capital-gain" name="capital-gain" required>
+                        <input type="number" id="capital-gain" name="capital-gain" placeholder="e.g., enter integer value" required>
                     </div>
                     <div class="input-group">
                         <label for="capital-loss">Capital Loss</label>
-                        <input type="number" id="capital-loss" name="capital-loss" required>
+                        <input type="number" id="capital-loss" name="capital-loss" placeholder="e.g., enter integer value" required>
                     </div>
                     <div class="input-group">
                         <label for="hours-per-week">Hours per Week</label>
-                        <input type="number" id="hours-per-week" name="hours-per-week" required>
+                        <input type="number" id="hours-per-week" name="hours-per-week" placeholder="e.g., 50 (work hours per week)" required>
                     </div>
                     <div class="input-group">
                         <label for="native-country">Native Country</label>
-                        <input type="text" id="native-country" name="native-country" required>
+                        <select id="native-country" name="native-country" required>
+                            <option value="United-States">United-States</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="England">England</option>
+                            <option value="Puerto-Rico">Puerto-Rico</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Outlying US">Outlying US (Guam, USVI, etc.)</option>
+                            <option value="India">India</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Greece">Greece</option>
+                            <option value="South">South</option>
+                            <option value="China">China</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
                 </div>
             </div>
