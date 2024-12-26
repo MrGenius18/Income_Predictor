@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #02021fd0;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #17cb20; /* Change title color to gold */
+            margin-top: 30px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-section .form-column {
+            width: 48%;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #333;
+            color: #f5f5f5;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+
+        .input-group input[type="submit"] {
+            background-color: #14720d75;
+            border: none;
+            cursor: pointer;
+        }
+
+        .input-group input[type="submit"]:hover {
+            background-color: #247e12;
+        }
+
+        .result {
+            margin-top: -5px; /* Reduced margin to bring result closer to footer */
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+
+        .result.positive {
+            color: #4caf50; /* Green for ">50K" */
+        }
+
+        .result.negative {
+            color: #f44336; /* Red for "<=50K" */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: -5px; /* Reduced margin to bring footer closer */
+            color: #d8d8d8d3;
+        }
+
+        .footer a {
+            color: #d8d8d8d3;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Income Predictor</h1>
+        <form method="POST" action="/predict">
+            <div class="form-section">
+                <div class="form-column">
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="workclass">Workclass</label>
+                        <input type="text" id="workclass" name="workclass" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="education">Education</label>
+                        <input type="text" id="education" name="education" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="education-num">Education Number</label>
+                        <input type="number" id="education-num" name="education-num" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" name="occupation" required>
+                    </div>
+                </div>
+
+                <div class="form-column">
+                    <div class="input-group">
+                        <label for="race">Race</label>
+                        <input type="text" id="race" name="race" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="sex">Sex</label>
+                        <input type="text" id="sex" name="sex" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="capital-gain">Capital Gain</label>
+                        <input type="number" id="capital-gain" name="capital-gain" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="capital-loss">Capital Loss</label>
+                        <input type="number" id="capital-loss" name="capital-loss" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="hours-per-week">Hours per Week</label>
+                        <input type="number" id="hours-per-week" name="hours-per-week" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="native-country">Native Country</label>
+                        <input type="text" id="native-country" name="native-country" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="submit" value="Predict Income">
+            </div>
+        </form>
+
+        {% if prediction %}
+        <div class="result {% if prediction == '>50K' %}positive{% else %}negative{% endif %}">
+            <p>Predicted Income: {{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        <p>Made with ❤️ by <a href="#">Genius</a></p>
+    </div>
+
+</body>
+</html>
