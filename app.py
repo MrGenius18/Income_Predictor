@@ -7,13 +7,13 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 app = Flask(__name__)
 
 # Load the trained model, scaler, and label encoder from pickle files
-with open('Income_Predictor.pkl', 'rb') as file:
+with open('pkl files/Income_Predictor.pkl', 'rb') as file:
     rf_grid_search = pickle.load(file)
 
-with open('scaler.pkl', 'rb') as file:
+with open('pkl files/scaler.pkl', 'rb') as file:
     SC = pickle.load(file)
 
-with open('label_encoder.pkl', 'rb') as file:
+with open('pkl files/label_encoder.pkl', 'rb') as file:
     LE = pickle.load(file)
 
 # Route for displaying the form
