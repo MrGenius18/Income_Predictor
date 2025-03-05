@@ -43,7 +43,7 @@ This project uses a **`Random Forest ML Model`** to predict an individual's inco
 
 <h2 align="left">➡️ File Structure</h2>
 
-![income_predictor_file_structure.png](https://github.com/MrGenius18/Income_Predictor/blob/e79ace96a21f215c0c83f1b3c788e68d3b53b724/income_predictor_file_structure.png)
+![income_predictor_file_structure.png](https://github.com/MrGenius18/Income_Predictor/blob/e4e1eeb4dba2aa7cfe4300c6e415a1a1aade9aad/Extra%20material/income_predictor_file_structure.png)
 
 ### Key Files
 
@@ -105,7 +105,11 @@ The model expects a dataset with the following features:
 
 ### Model Wise Metrics:
 
-![income_predictor_metrics_df.png](https://github.com/MrGenius18/Income_Predictor/blob/e79ace96a21f215c0c83f1b3c788e68d3b53b724/income_predictor_metrics_df.png)
+![income_predictor_metrics_df.png](https://github.com/MrGenius18/Income_Predictor/blob/e4e1eeb4dba2aa7cfe4300c6e415a1a1aade9aad/Extra%20material/income_predictor_metrics_df.png)
+
+<h2 align="left">✨ Demo</h2>
+
+![Demo Screenshot](https://github.com/MrGenius18/Income_Predictor/blob/e4e1eeb4dba2aa7cfe4300c6e415a1a1aade9aad/Extra%20material/Demo.png)
 
 ---
 
